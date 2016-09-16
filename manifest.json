@@ -4,10 +4,12 @@
   "version": "0.1.0",
   "description": "Simple, customizable web page alert system. Totem displays a custom alert message to you for every website on your watch list.",
   "content_scripts": [
-    "matches": ["<all_urls>"],
-    "match_about_blank": true,
-    "js": "totem.js",
-    "run_at": "document_end"
+    {
+      "matches": ["<all_urls>"],
+      "match_about_blank": true,
+      "js": ["totem.js"],
+      "run_at": "document_end"
+    }
   ],
   "options_page": "options.html",
   "permissions": ["storage"]
